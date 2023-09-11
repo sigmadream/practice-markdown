@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="README2.css" />
+<style type="text/css">
+  :root {
+  --color: #2096ba;
+  --color-secondary: #2096ba;
+  --color-accent: #f7f8fa;
+  --color-text: #222426;
+  --color-shadow: #c5d2db;
+  --width-content: 720px;
+  }
+  
+  code, samp {
+    font-size: 1.2em;
+  }
+
+  nav {
+    justify-content: space-evenly;
+  }
+  
+  a:hover {
+    filter: none;
+    color: #df6e21;
+  }
+</style>
+</head>
+<body>
+<main>
+<hr>
+<article>
+<h1 id="markdown">Markdown</h1>
+<blockquote>
+<p>마크다운 사용법을 소개하기 위한 저장소입니다. 해당 문서의 마크다운
+관련 원본은 <a
+href="https://github.com/jinkyukim-me/markdown_ko">jinkyukim-me</a>님의
+저장소를 참고하였습니다. <code>Pandoc</code>과 관련된 내용은
+부산대학교에서 진행된 2023년 2학기 ’공학작문 및 발표’를 위해서
+추가하였습니다. 마크다운 관련된 자료가 도움이 되셨길 바랍니다.</p>
+</blockquote>
+<h2 id="마크다운-소개">마크다운 소개</h2>
+<p>웹에서 사용하는 태그는 가독성과 작업의 편의성을 저하시킬 수 있습니다.
+기존의 출판과 달리 웹에서 찾을 수 있는 콘텐츠는 <code>HTML</code>(hyper
+text markup language)이라는 마크업(markup) 언어로 구성되어 있습니다.
+HTML은 다양한 요소(제목, 목록, 이미지, 텍스트 등)로 구성되어 있습니다.
+해당 구성요소는 태그(tag)를 사용합니다. 이런 태그를 사용해서 내용을
+기술하는 작업은 번거로울 수 있습니다. 왜냐하면 태그를 사용하기 위해선
+<code>&lt;</code>,<code>&gt;</code>로 둘러싸인 형태의 태그를 사용해야
+하기 때문입니다. 이런 태그를 사용하는 것은 쉽지 않습니다. 또한, 태그를
+사용하면 문서의 내용을 읽기 어렵게 만들 수 있습니다.</p>
+<h3 id="마크다운">마크다운</h3>
+<p>HTML에서 사용하는 태그로 인한 문제를 해결하기 위해
+마크다운(markdown)이라는 간단한 마크업 언어가 만들어졌습니다. 마크다운은
+<a href="https://daringfireball.net/projects/markdown/">존 그루버</a>가
+만든 일반 텍스트 서식을 지정하는 간단한 방법입니다. 웹용 문서의 서식을
+지정하는 더 효율적이고 간략한 방법이 마크다운(markdown)입니다.</p>
+<p>마크다운을 사용하면 웹용 문서의 서식을 빠르게 지정할 수 있으며,
+언제든지 HTML로 변환할 수 있습니다. 마크다운은 태그에 의존하는 대신
+키보드의 단순 기호를 사용하여 서식을 지정합니다. 예를 들어 해시
+기호(<code>#</code>)는 제목을 나타냅니다. 마크다운으로 목록, 들여쓰기
+텍스트 등을 만들 수도 있습니다. 수많은 HTML 태그를 입력하는 것보다 훨씬
+간편합니다!</p>
+<h3 id="왜-마크다운인가">왜 마크다운인가?</h3>
+<p>마크다운에는 여러 가지 장점이 있습니다. 일반 텍스트이므로 모든 운영
+체제, 모든 모바일 장치 또는 웹에서 문서 작업을 할 수 있습니다.
+마크다운을 사용하면 적은 노력으로 효율적으로 문서를 작성하고 서식을
+지정할 수 있습니다. 무엇보다 내용과 형식을 손쉽게 분리할 수 있다는 점도
+장점이라 할 수 있습니다.</p>
+<h2 id="markdown-syntax">Markdown Syntax</h2>
+<p>좋든 나쁘든, 마크다운을 사용하면 다양한 방식으로 특정 종류의 서식을
+적용할 수 있습니다. 제가 가장 효율적으로 사용할 수 있는 서식을
+알려드리겠습니다.</p>
+<blockquote>
+<p>시작할 준비가 되셨나요? 좋아요! 이제 시작해보죠.</p>
+</blockquote>
+<h2 id="table-of-contents목차">Table of contents(목차)</h2>
+<p><a href="#1-headers">01. Headers(제목)</a><br> <a
+href="#2-emphasis">02. Emphasis(강조)</a><br> <a
+href="#3-blockquotes">03. Block quotes(인용)</a><br> <a
+href="#4-lists">04. Lists(목록)</a><br> <a
+href="#5-backslash-escapes">05. Backslash Escapes(이스케이프
+시퀀스)</a><br> <a href="#6-images">06. Images(이미지)</a><br> <a
+href="#7-links-anchor">07. Links(Anchor, 링크)</a><br> <a
+href="#8-fenced-code-blocks">08. Fenced Code Blocks(코드 블럭)</a><br>
+<a href="#9-task-lisk">09. Task List(체크 리스트)</a><br> <a
+href="#10-horizontal-rules">10. Horizontal Rules(수평선)</a><br> <a
+href="#11-emoji">11. Emoji(이모티콘)</a><br> <a href="#12-table">12.
+Table(테이블)</a><br> <a href="#13-line-breaks">13. Line
+Breaks(줄바꿈)</a><br></p>
+<hr />
+<h2 id="headers제목">01. Headers(제목)</h2>
+<ul>
+<li><code>#</code>으로 시작하는 문자열</li>
+<li><code>#</code>은 최대 여섯개까지 가능(<code>H1</code> ~
+<code>H6</code>)</li>
+<li><code>#</code>이 늘어날때마다 제목의 크기(스케일)이 낮아짐</li>
+<li><code>H1</code>은 <code>===</code>, <code>H2</code>는
+<code>---</code> 가능</li>
+</ul>
+<h3 id="syntax-마크다운-사용법">Syntax 마크다운 사용법</h3>
+<pre><code>This is an H1
+===
+This is an H2
+---
+# This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6</code></pre>
+<h3 id="실행결과">실행결과</h3>
+<h1 id="this-is-an-h1">This is an H1<br></h1>
+<h2 id="this-is-an-h2">This is an H2<br></h2>
+<h1 id="this-is-an-h1-부parts에-사용">This is an H1; 부(parts)에
+사용<br></h1>
+<h2 id="this-is-an-h2-장chapters에-사용">This is an H2; 장(chapters)에
+사용<br></h2>
+<h3 id="this-is-an-h3-페이지page-섹션에-사용">This is an H3;
+페이지(page) 섹션에 사용<br></h3>
+<h4 id="this-is-an-h4-하위sub-섹션에-사용">This is an H4; 하위(sub)
+섹션에 사용<br></h4>
+<h5 id="this-is-an-h5-하위sub-섹션-아래의-하위-섹션에-사용">This is an
+H5; 하위(sub) 섹션 아래의 하위 섹션에 사용<br></h5>
+<h6 id="this-is-an-h6-문단p에-사용">This is an H6; 문단(p)에
+사용<br></h6>
+<hr />
+<h2 id="emphasis강조">2. Emphasis(강조)</h2>
+<ul>
+<li>기울여 쓰기(<code>italic</code>) : <code>*</code> 또는
+<code>_</code>로 감싼 텍스트</li>
+<li>두껍게 쓰기(<code>bold</code>) : <code>**</code> 또는
+<code>__</code>로 감싼 텍스트</li>
+<li>취소선(<code>strikethrough</code>) : <code>~~</code>로 감싼
+텍스트</li>
+<li>이탤릭체와 두껍게를 같이 사용할 수 있음</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-1">Syntax 마크다운 사용법</h3>
+<pre><code>*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+~~This is canceled~~
+*You **can** combine them*</code></pre>
+<h3 id="실행결과-1">실행결과</h3>
+<p><em>This text will be italic</em><br> <em>This will also be
+italic</em><br> <strong>This text will be bold</strong><br> <strong>This
+will also be bold</strong><br> <del>This is canceled</del><br> <em>You
+<strong>can</strong> combine them</em><br></p>
+<hr />
+<h2 id="block-quotes인용">03. Block quotes(인용)</h2>
+<ul>
+<li><code>&gt;</code>으로 시작하는 텍스트</li>
+<li><code>&gt;</code>는 3개까지 가능</li>
+<li><code>1개</code>는 인용문</li>
+<li><code>2개</code>는 인용문 안에 인용문</li>
+<li><code>3개</code>는 인용문 안에 인용문 안에 인용문</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-2">Syntax 마크다운 사용법</h3>
+<pre><code>As Grace Hopper said:
+&gt; I’ve always been more interested in the future than in the past.
+&gt; This is a first blockquote.
+&gt; &gt; This is a second blockquote.
+&gt; &gt; &gt; This is a third blockquote.</code></pre>
+<h3 id="실행결과-2">실행결과</h3>
+<p>As Grace Hopper said:</p>
+<blockquote>
+<p>I’ve always been more interested in the future than in the past. This
+is a first blockquote.</p>
+<blockquote>
+<p>This is a second blockquote.</p>
+<blockquote>
+<p>This is a third blockquote.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr />
+<h2 id="lists목록">04. Lists(목록)</h2>
+<h3 id="unordered-lists-순서가-없는-목록">04-1. Unordered lists 순서가
+없는 목록</h3>
+<ul>
+<li><code>*</code>, <code>+</code>, <code>-</code> 를 이용해서 순서가
+없는 목록을 만들 수 있음</li>
+<li>들여쓰기를 하면 모양이 바뀜</li>
+</ul>
+<h3 id="ordered-lists-순서가-있는-목록">04-2. Ordered lists 순서가 있는
+목록</h3>
+<ul>
+<li>숫자를 기입하면 순서가 있는 목록</li>
+<li>들여쓰기를 하면 모양이 바뀜</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-3">Syntax 마크다운 사용법</h3>
+<pre><code>* Item 1
+* Item 2
+    * Item 1
+    * Item 2
+        * Item 1
+        * Item 2
+1. Item 1
+2. Item 2
+3. Item 3
+    1. Item 1
+    2. Item 2
+    3. Item 3
+        1. Item 1
+        2. Item 2
+        3. Item 3</code></pre>
+<h3 id="실행결과-3">실행결과</h3>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul></li>
+</ul></li>
+</ul>
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol></li>
+</ol></li>
+</ol>
+<hr />
+<h2 id="backslash-escapes이스케이프-시퀀스">05. Backslash
+Escapes(이스케이프 시퀀스)</h2>
+<ul>
+<li>특수문자를 표현할 때, 표시될 문자 앞에 <code>\</code>를 넣고
+특수문자를 적으면 됨</li>
+<li>주의할 점은 앞과 뒤에가 형식이 똑같이 백슬래쉬 뒤에 특수문자입니다.
+<code>감싸는 형태가 아님</code></li>
+<li>백슬래쉬는 아래의 특수문자를 표현할 수 있음 _
+ <code>backslash</code>, ` <code>backtick</code>, *
+<code>asterisk</code>, _ <code>underscore</code>, {}
+<code>curly braces</code>, [] <code>square brackets</code>, ()
+<code>parentheses</code>, # <code>hash mark</code>, +
+<code>plus sign</code>, - <code>minus sign (hyphen)</code>, .
+<code>dot</code>, ! <code>exclamation mark</code></li>
+</ul>
+<h3 id="syntax-마크다운-사용법-4">Syntax 마크다운 사용법</h3>
+<pre><code>\*literal asterisks\*
+\#hash mark\#
+\[squre brackets\]</code></pre>
+<h3 id="demonstration-실행결과">Demonstration 실행결과</h3>
+<p>*literal asterisks*<br> #hash mark#<br> [squre brackets]<br></p>
+<hr />
+<h2 id="images이미지">06. Images(이미지)</h2>
+<ul>
+<li><code>&lt;img&gt;</code>로 변환</li>
+<li>링크와 비슷하지만 앞에 <code>!</code>가 붙음</li>
+<li>인라인 이미지 ![alt text](/test.png)</li>
+<li>링크 이미지 ![alt text](image_URL)</li>
+<li>이미지의 사이즈를 변경하기 위해서는
+<code>&lt;img width="OOOpx" height="OOOpx"&gt;&lt;/img&gt;</code>와 같이
+표현</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-5">Syntax 마크다운 사용법</h3>
+<pre><code>![alt 토마토](/img/tomato.jpg)
+![alt man](/img/man_laptop.jpg)
+![alt Concrete Buildings](https://github.com/sigmadream/practice-markdown/blob/main/img/linux.jpg)</code></pre>
+<h3 id="실행결과-4">실행결과</h3>
+<p><img src="/img/windows.jpg" alt="alt 윈도우" /> <img
+src="/img/macos.jpg" alt="alt macOS" /> <img
+src="https://raw.githubusercontent.com/sigmadream/practice-markdown/main/img/linux.jpg"
+alt="alt 리눅스" /></p>
+<hr />
+<h2 id="linksanchor-링크">07. Links(Anchor, 링크)</h2>
+<h2 id="external-links">07-1. External Links</h2>
+<ul>
+<li>인라인 링크: <a href="http://example.com"
+title="링크 제목">링크</a></li>
+<li>url 링크: &lt;example.com&gt;, <a href="mailto:example@example.com"
+class="email">example@example.com</a>; 꺽쇠 괄호 없어도 자동으로 링크를
+사용</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-6">Syntax 마크다운 사용법</h3>
+<pre><code>[Google](http://www.google.com &quot;구글&quot;)
+[Naver](http://www.naver.com &quot;네이버&quot;)
+[Github](http://www.github.com &quot;깃허브&quot;)
+구글 www.google.com; 꺽쇠없음
+네이버 &lt;www.naver.com&gt;; 꺽쇠있음
+My mail &lt;jinkyukim.dev@gmail.com&gt;</code></pre>
+<h3 id="실행결과-5">실행결과</h3>
+<p><a href="http://www.google.com" title="구글">Google</a><br> <a
+href="http://www.naver.com" title="네이버">Naver</a><br> <a
+href="http://www.github.com" title="깃허브">Github</a><br> 구글
+www.google.com <br> 네이버 &lt;www.naver.com&gt; <br> My mail <a
+href="mailto:jinkyukim.dev@gmail.com"
+class="email">jinkyukim.dev@gmail.com</a><br></p>
+<h2 id="internal-links">07-2. Internal Links</h2>
+<ul>
+<li><a href="#이동할%20헤드(제목)">보여지는 내용</a></li>
+<li>괄호 안의 링크를 쓸 때는 띄어쓰기는 <code>-</code>로 연결, 영어는
+모두 소문자로 작성</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-7">Syntax 마크다운 사용법</h3>
+<pre><code>[1. Headers 헤더](#1-headers-헤더)
+[2. Emphasis 강조](#2-emphasis-강조)
+[3. Blockquotes 인용](#3-blockquotes-인용)</code></pre>
+<h3 id="실행결과-6">실행결과</h3>
+<p><a href="#1-headers">01. Headers 헤더</a><br> <a
+href="#2-emphasis">02. Emphasis 강조</a><br> <a
+href="#3-blockquotes">03. Block quotes 인용</a><br></p>
+<hr />
+<h2 id="fenced-code-blocks코드-블럭">08. Fenced Code Blocks(코드
+블럭)</h2>
+<ul>
+<li>간단한 인라인 코드는 텍스트를 앞뒤로 `기호로 감싸면 됨</li>
+<li>``` 혹은 ~~~ 코드.</li>
+<li>첫 줄과 마지막 줄에 Back quote ( ` ) 또는 물결( ~ ) 3개 삽입</li>
+<li>코드가 여러 줄인 경우, 줄 앞에 공백 네 칸을 추가</li>
+<li>``` 옆에 언어를 지정해주면 syntax color가 적용</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-8">Syntax 마크다운 사용법</h3>
+<pre><code>    ```
+    This is code blocks.
+    ```
+    ~~~
+    This is code blocks.
+    ~~~
+        4 spaces
+    ```javascript
+    function test() {
+     console.log(&quot;look ma’, no spaces&quot;);
+    }
+    ```</code></pre>
+<h3 id="실행결과-7">실행결과</h3>
+<pre><code>This is code blocks.</code></pre>
+<pre><code>This is code blocks.</code></pre>
+<pre><code>4 spaces</code></pre>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">test</span>() {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;look ma’, no spaces&quot;</span>)<span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<hr />
+<h2 id="task-list체크-리스트">09. Task List(체크 리스트)</h2>
+<ul>
+<li>줄 앞에 <code>- [x]</code>를 써서 완료된 리스트 표시</li>
+<li>줄 앞에 <code>- [ ]</code>를 써서 미완료된 리스트 표시</li>
+<li>체크 안에서 강조 외에 여러 기능을 사용할 수 있으며, Github에서 활용
+가능</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-9">Syntax 마크다운 사용법</h3>
+<pre><code>- [x] this is a complete item
+- [ ] this is an incomplete item
+- [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)</code></pre>
+<h3 id="실행결과-8">실행결과</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="" />this is a complete
+item</label></li>
+<li><label><input type="checkbox" />this is an incomplete
+item</label></li>
+<li><label><input type="checkbox" checked="" /><span class="citation"
+data-cites="mentions">@mentions</span>, #refs, <a href="">links</a>,
+<strong>formatting</strong>, and <del>tags</del> supported</label></li>
+<li><label><input type="checkbox" checked="" />list syntax required (any
+unordered or ordered list supported)</label></li>
+</ul>
+<hr />
+<h2 id="horizontal-rules수평선">10. Horizontal Rules(수평선)</h2>
+<ul>
+<li>- 또는 * 또는 _ 을 3개 이상 작성.</li>
+<li>단, -을 사용할 경우 header로 인식할 수 있으니 이 전 라인은
+비워두어야 함</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-10">Syntax 마크다운 사용법</h3>
+<pre><code>* * *
+***
+*****
+- - -
+-------------------</code></pre>
+<h3 id="실행결과-9">실행결과</h3>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
+<h2 id="emoji이모티콘">11. Emoji(이모티콘)</h2>
+<ul>
+<li>마크다운을 이용해 이모티콘을 표현가능</li>
+<li>깃허브도 적용가능</li>
+<li>더 많은 리스트는 아래의 사이트로 방문</li>
+<li><a href="www.emoji-cheat-sheet.com">Emoji Cheat Sheet</a></li>
+</ul>
+<h3 id="syntax-마크다운-사용법-11">Syntax 마크다운 사용법</h3>
+<pre><code>GitHub supports emoji!
+:+1: :sparkles: :camel: :tada:
+:rocket: :metal: :octocat:</code></pre>
+<h3 id="실행결과-10">실행결과</h3>
+<p>GitHub supports emoji! :+1: :sparkles: :camel: :tada: :rocket:
+:metal: :octocat:</p>
+<hr />
+<h2 id="table테이블">12. Table(테이블)</h2>
+<ul>
+<li>헤더와 셀을 구분할 때 3개 이상의 <code>-</code>(hyphen/dash) 기호가
+필요</li>
+<li>헤더 셀을 구분하면서 :(Colons) 기호로 셀(열/칸) 안에 내용을 정렬할
+수 있음</li>
+<li>가장 좌측과 가장 우측에 있는 |(vertical bar) 기호는 생략 가능</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-12">Syntax 마크다운 사용법</h3>
+<pre><code>테이블 생성
+
+헤더1|헤더2|헤더3|헤더4
+---|---|---|---
+셀1|셀2|셀3|셀4
+셀5|셀6|셀7|셀8
+셀9|셀10|셀11|셀12
+
+테이블 정렬
+
+헤더1|헤더2|헤더3
+:---|:---:|---:
+Left|Center|Right
+1|2|3
+4|5|6
+7|8|9</code></pre>
+<h3 id="실행결과-11">실행결과</h3>
+<ul>
+<li>테이블 생성</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>헤더1</th>
+<th>헤더2</th>
+<th>헤더3</th>
+<th>헤더4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>셀1</td>
+<td>셀2</td>
+<td>셀3</td>
+<td>셀4</td>
+</tr>
+<tr class="even">
+<td>셀5</td>
+<td>셀6</td>
+<td>셀7</td>
+<td>셀8</td>
+</tr>
+<tr class="odd">
+<td>셀9</td>
+<td>셀10</td>
+<td>셀11</td>
+<td>셀12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>테이블 정렬</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">헤더1</th>
+<th style="text-align: center;">헤더2</th>
+<th style="text-align: right;">헤더3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Left</td>
+<td style="text-align: center;">Center</td>
+<td style="text-align: right;">Right</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="line-breaks줄바꿈">13. Line Breaks(줄바꿈)</h2>
+<ul>
+<li><code>&lt;br&gt;</code>를 활용해서 줄바꿈을 할 수 있음</li>
+</ul>
+<h3 id="syntax-마크다운-사용법-13">Syntax 마크다운 사용법</h3>
+<pre><code>言葉はまるで雪の結晶
+말은 마치 눈의 결정 &lt;br&gt;
+君にプレゼントしたくても
+너에게 선물하고 싶어도 &lt;br&gt;</code></pre>
+<h3 id="실행결과-12">실행결과</h3>
+<p>言葉はまるで雪の結晶 말은 마치 눈의 결정 <br>
+君にプレゼントしたくても 너에게 선물하고 싶어도 <br></p>
+<h1 id="pandoc">Pandoc</h1>
+<p>Pandoc은 마크다운을 다른 문서 형식으로 변환하는 데 사용할 수 있는
+무료 오픈 소스 도구입니다. Pandoc은 다음과 같은 다양한 형식으로 변환할
+수 있습니다.</p>
+<ul>
+<li>HTML</li>
+<li>Markdown</li>
+<li>LaTeX</li>
+<li>PDF</li>
+<li>EPUB</li>
+</ul>
+<h2 id="pandoc의-설치">Pandoc의 설치</h2>
+<p>Pandoc은 다양한 운영 체제에서 사용할 수 있습니다. <a
+href="https://pandoc.org/installing.html">Pandoc의 설치</a>를 참고하여
+설치하시길 바랍니다.</p>
+<pre><code>// Windows
+$ winget install --source winget --exact --id JohnMacFarlane.Pandoc
+$ choco install pandoc
+$ scoop install pandoc
+
+// macOS
+$ brew install pandoc</code></pre>
+<h2 id="markdown을-html로-변환">Markdown을 HTML로 변환</h2>
+<pre><code>$ pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 -o README.html</code></pre>
+<hr>
+</article>
+</main>
+</body>
+</html>
