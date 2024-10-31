@@ -161,19 +161,19 @@ As Grace Hopper said:
 ```
 * Item 1
 * Item 2
-	* Item 1
-	* Item 2
-		* Item 1
-		* Item 2
+ * Item 1
+ * Item 2
+  * Item 1
+  * Item 2
 1. Item 1
 2. Item 2
 3. Item 3
-	1. Item 1
-	2. Item 2
-	3. Item 3
-		1. Item 1
-		2. Item 2
-		3. Item 3
+ 1. Item 1
+ 2. Item 2
+ 3. Item 3
+  1. Item 1
+  2. Item 2
+  3. Item 3
 ```
 
 ### 실행결과
@@ -267,7 +267,7 @@ My mail <test@test.com>
 [Google](http://www.google.com "구글")<br>
 [Naver](http://www.naver.com "네이버")<br>
 [Github](http://www.github.com "깃허브")<br>
-구글 www.google.com <br>
+구글 <www.google.com> <br>
 네이버 <www.naver.com><br>
 My mail <test@test.com><br>
 
@@ -476,7 +476,7 @@ Left|Center|Right
 君にプレゼントしたくても
 너에게 선물하고 싶어도 <br>
 
-# Pandoc
+## Pandoc
 
 Pandoc은 마크다운을 다른 문서 형식으로 변환하는 데 사용할 수 있는 무료 오픈 소스 도구입니다. Pandoc은 다음과 같은 다양한 형식으로 변환할 수 있습니다.
 
@@ -486,22 +486,48 @@ Pandoc은 마크다운을 다른 문서 형식으로 변환하는 데 사용할 
 - PDF
 - EPUB
 
-## Pandoc의 설치
+### Pandoc의 설치
 
 Pandoc은 다양한 운영 체제에서 사용할 수 있습니다. [Pandoc의 설치](https://pandoc.org/installing.html)를 참고하여 설치하시길 바랍니다.
 
-```
-// Windows
-$ winget install --source winget --exact --id JohnMacFarlane.Pandoc
-$ choco install pandoc
-$ scoop install pandoc
+#### Windows
 
-// macOS
-$ brew install pandoc
+Windows 11 이상에서는 [winget](https://learn.microsoft.com/en-us/windows/package-manager/)이 설치되어 있으니, 간단하게 Pandoc을 설치하실 수 있습니다.
+
+```bash
+winget install --source winget --exact --id JohnMacFarlane.Pandoc
 ```
 
-## Markdown을 HTML로 변환
+외부 패키지 관지라([choco](https://chocolatey.org/), [scoop](https://scoop.sh/))를 사용하신다면 자신이 사용하는 매니저를 사용해서 pandoc을 설치하세요.
 
+```bash
+// choco
+choco install pandoc
+
+// scoop
+scoop install pandoc
 ```
-$ pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 -o README.html
+
+#### macOS
+
+macOS 사용자는 [brew](https://brew.sh/)를 사용해서 pandoc을 설치하실 수 있습니다.
+
+```bash
+brew install pandoc
+```
+
+#### Linux
+
+Ubuntu(>=22.04) 이상의 경우 별다른 설정없이 pandoc을 설치하실 수 있습니다.
+
+```bash
+sudo apt install pandoc
+```
+
+### Markdown을 HTML로 변환
+
+pandoc을 이용해서 Markdown을 HTML을 변환하는 방법은 아래와 같습니다.
+
+```bash
+pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 -o README.html
 ```
