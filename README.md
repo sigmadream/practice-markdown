@@ -404,8 +404,8 @@ GitHub supports emoji!
 ### 실행결과
 
 GitHub supports emoji!
-:+1: :sparkles: :camel: :tada:
-:rocket: :metal: :octocat:
+:+1:, :sparkles:, :camel:, :tada:
+:rocket:, :metal:, :octocat:
 
 ---
 
