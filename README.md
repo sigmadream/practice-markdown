@@ -404,8 +404,7 @@ GitHub supports emoji!
 ### 실행결과
 
 GitHub supports emoji!
-:+1:, :sparkles:, :camel:, :tada:
-:rocket:, :metal:, :octocat:
+:+1: , :sparkles: , :camel: , :tada: , :rocket: , :metal: , :octocat:
 
 ---
 
@@ -530,5 +529,5 @@ sudo apt install pandoc
 pandoc을 이용해서 Markdown을 HTML을 변환하는 방법은 아래와 같습니다.
 
 ```bash
-pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 -o README.html
+pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 --metadata title="Practice Markdown" -o README.html
 ```
