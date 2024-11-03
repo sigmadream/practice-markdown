@@ -391,7 +391,7 @@ function test() {
 - 마크다운을 이용해 이모티콘을 표현가능
 - 깃허브도 적용가능
 - 더 많은 리스트는 아래의 사이트로 방문
-- [Emoji Cheat Sheet](www.emoji-cheat-sheet.com)
+- [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 ### Syntax 마크다운 사용법
 
