@@ -1,6 +1,6 @@
 # Markdown
 
-> 마크다운 사용법을 소개하기 위한 저장소입니다. 해당 문서의 마크다운 관련 원본은 [jinkyukim-me](https://github.com/jinkyukim-me/markdown_ko)님의 저장소를 참고하였습니다. `Pandoc`과 관련된 내용은 부산대학교에서 진행된 2024년 2학기 '공학작문 및 발표'를 위해서 추가하였습니다. 마크다운 관련된 자료가 도움이 되셨길 바랍니다.
+> 마크다운 사용법을 소개하기 위한 저장소입니다. 해당 문서의 마크다운 관련 원본은 [jinkyukim-me](https://github.com/jinkyukim-me/markdown_ko)님의 저장소를 참고하였습니다. `Pandoc`과 관련된 내용은 부산대학교에서 진행된 '공학작문 및 발표'를 위해서 추가하였습니다. 마크다운 관련된 자료가 도움이 되셨길 바랍니다.
 
 ## HTML 단점
 
@@ -13,6 +13,10 @@
 HTML에서 사용하는 태그로 인한 문제를 해결하기 위해 마크다운(markdown)이라는 간단한 마크업 언어가 만들어졌습니다. 마크다운은 [존 그루버](https://daringfireball.net/projects/markdown/)가 만든 일반 텍스트 서식을 지정하는 간단한 방법입니다. 웹용 문서의 서식을 지정하는 더 효율적이고 간략한 방법이 마크다운(markdown)입니다.
 
 마크다운을 사용하면 웹용 문서의 서식을 빠르게 지정할 수 있으며, 언제든지 HTML로 변환할 수 있습니다. 마크다운은 태그에 의존하는 대신 키보드의 단순 기호를 사용하여 서식을 지정합니다. 예를 들어 해시 기호(`#`)는 제목을 나타냅니다. 마크다운으로 목록, 들여쓰기 텍스트 등을 만들 수도 있습니다. 수많은 HTML 태그를 입력하는 것보다 훨씬 간편합니다!
+
+### GitHub Flavored Markdown (GFM)
+
+GitHub는 표준 마크다운을 확장한 GitHub Flavored Markdown (GFM)을 사용합니다. GFM은 표준 마크다운의 모든 기능을 포함하면서도 GitHub에서만 사용할 수 있는 추가 기능들을 제공합니다. 예를 들어, 테이블, 취소선, 작업 목록, 이모지, 자동 링크 변환, 사용자 멘션(@mentions), 이슈 참조(#issue) 등의 기능이 있습니다.
 
 ## 마크다운의 장점
 
@@ -39,7 +43,8 @@ HTML에서 사용하는 태그로 인한 문제를 해결하기 위해 마크다
 [11. Emoji(이모지)](#11-emoji이모지)<br>
 [12. Table(테이블)](#12-table테이블)<br>
 [13. Line Breaks(줄바꿈)](#13-line-breaks줄바꿈)<br>
-[14. Pandoc](#14-pandoc)<br>
+[14. GitHub Flavored Markdown (GFM)](#14-github-flavored-markdown-gfm)<br>
+[15. Pandoc](#15-pandoc)<br>
 
 ---
 
@@ -89,7 +94,7 @@ This is an H2
 
 - 기울여 쓰기(`italic`) : `*` 또는 `_`로 감싼 텍스트
 - 두껍게 쓰기(`bold`) : `**` 또는 `__`로 감싼 텍스트
-- 취소선(`strikethrough`) : `~~`로 감싼 텍스트
+- 취소선(`strikethrough`) : `~~`로 감싼 텍스트 (GFM 기능)
 - 이탤릭체와 두껍게를 같이 사용할 수 있음
 
 ### Syntax 마크다운 사용법
@@ -250,7 +255,8 @@ As Grace Hopper said:
 ## 07-1. External Links
 
 - 인라인 링크: [링크](http://example.com "링크 제목")
-- url 링크: <example.com>, <example@example.com>; 꺽쇠 괄호 없어도 자동으로 링크를 사용
+- url 링크: <example.com>, <example@example.com>
+- GFM에서는 꺽쇠 괄호 없이도 URL과 이메일 주소가 자동으로 링크로 변환됨 (자세한 내용은 섹션 14 참고)
 
 ### Syntax 마크다운 사용법
 
@@ -296,10 +302,10 @@ My mail <test@test.com><br>
 ## 08. Fenced Code Blocks(코드 블럭)
 
 - 간단한 인라인 코드는 텍스트를 앞뒤로 \`기호로 감싸면 됨
-- \`\`\` 혹은 ~~~ 코드.
+- \`\`\` 혹은 ~~~ 코드. (GFM 기능)
 - 첫 줄과 마지막 줄에 Back quote ( \` ) 또는 물결( ~ ) 3개 삽입
 - 코드가 여러 줄인 경우, 줄 앞에 공백 네 칸을 추가
-- \`\`\` 옆에 언어를 지정해주면 syntax color가 적용
+- \`\`\` 옆에 언어를 지정해주면 syntax color가 적용 (GFM 기능)
 
 ### Syntax 마크다운 사용법
 
@@ -335,11 +341,12 @@ function test() {
 
 ---
 
-## 09. Task List(체크 리스트)
+## 09. Task List(체크 리스트) (GFM 기능)
 
 - 줄 앞에 `- [x]`를 써서 완료된 리스트 표시
 - 줄 앞에 `- [ ]`를 써서 미완료된 리스트 표시
-- 체크 안에서 강조 외에 여러 기능을 사용할 수 있으며, Github에서 활용 가능
+- 체크 안에서 강조 외에 여러 기능을 사용할 수 있으며, GitHub에서 활용 가능
+- GitHub에서는 체크박스를 클릭하여 직접 체크/언체크할 수 있음
 
 ### Syntax 마크다운 사용법
 
@@ -386,10 +393,10 @@ function test() {
 
 ---
 
-## 11. Emoji(이모지)
+## 11. Emoji(이모지) (GFM 기능)
 
 - 마크다운을 이용해 이모티콘을 표현가능
-- 깃허브도 적용가능
+- GitHub에서 완벽하게 지원됨
 - 더 많은 리스트는 아래의 사이트로 방문
 - [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
@@ -408,11 +415,12 @@ GitHub supports emoji!
 
 ---
 
-## 12. Table(테이블)
+## 12. Table(테이블) (GFM 기능)
 
 - 헤더와 셀을 구분할 때 3개 이상의 `-`(hyphen/dash) 기호가 필요
 - 헤더 셀을 구분하면서 :(Colons) 기호로 셀(열/칸) 안에 내용을 정렬할 수 있음
 - 가장 좌측과 가장 우측에 있는 |(vertical bar) 기호는 생략 가능
+- GitHub에서 테이블은 자동으로 스타일이 적용되어 보기 좋게 표시됨
 
 ### Syntax 마크다운 사용법
 
@@ -476,7 +484,85 @@ Left|Center|Right
 君にプレゼントしたくても
 너에게 선물하고 싶어도 <br>
 
-## 14. Pandoc
+---
+
+## 14. GitHub Flavored Markdown (GFM)
+
+GitHub Flavored Markdown은 GitHub에서 사용하는 마크다운의 확장 버전입니다. 표준 마크다운에 추가로 제공되는 GitHub 특화 기능들을 소개합니다.
+
+### 14-1. @mentions (사용자/팀 멘션)
+
+GitHub에서 `@` 기호를 사용하여 사용자나 팀을 멘션할 수 있습니다. 멘션된 사용자는 알림을 받게 됩니다.
+
+#### Syntax 마크다운 사용법
+
+```
+@username - 특정 사용자 멘션
+@organization/team-name - 조직의 팀 멘션
+@octocat - 예시 사용자
+```
+
+#### 실행결과
+
+@username - 특정 사용자 멘션<br>
+@organization/team-name - 조직의 팀 멘션<br>
+@octocat - 예시 사용자<br>
+
+### 14-2. #issue 및 #PR 참조
+
+`#` 기호를 사용하여 이슈나 Pull Request를 참조할 수 있습니다. 같은 저장소 내의 이슈나 PR에 자동으로 링크가 생성됩니다.
+
+#### Syntax 마크다운 사용법
+
+```
+이 기능은 #123 이슈와 관련이 있습니다.
+#456 PR에서 이 문제를 해결했습니다.
+```
+
+#### 실행결과
+
+이 기능은 #123 이슈와 관련이 있습니다.<br>
+#456 PR에서 이 문제를 해결했습니다.<br>
+
+### 14-3. SHA 커밋 참조
+
+커밋 해시를 사용하여 특정 커밋을 참조할 수 있습니다. 전체 해시 또는 짧은 해시(최소 7자리)를 사용할 수 있습니다.
+
+#### Syntax 마크다운 사용법
+
+```
+이 버그는 16c999e2bcf2e2bcf2e2bcf2e2bcf2e2bcf2e2bcf 커밋에서 수정되었습니다.
+짧은 해시도 가능합니다: 16c999e
+```
+
+#### 실행결과
+
+이 버그는 16c999e2bcf2e2bcf2e2bcf2e2bcf2e2bcf2e2bcf 커밋에서 수정되었습니다.<br>
+짧은 해시도 가능합니다: 16c999e<br>
+
+### 14-4. 자동 링크 변환
+
+GitHub는 URL과 이메일 주소를 자동으로 링크로 변환합니다. 꺽쇠 괄호(`<>`)를 사용하지 않아도 자동으로 링크가 생성됩니다.
+
+#### Syntax 마크다운 사용법
+
+```
+https://github.com
+www.github.com
+user@example.com
+```
+
+#### 실행결과
+
+https://github.com<br>
+www.github.com<br>
+user@example.com<br>
+
+더 자세한 내용은 [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)을 참고하세요.
+
+---
+
+## 15. Pandoc
 
 Pandoc은 마크다운을 다른 문서 형식으로 변환하는 데 사용할 수 있는 무료 오픈 소스 도구입니다. Pandoc은 다음과 같은 다양한 형식으로 변환할 수 있습니다.
 
@@ -531,3 +617,17 @@ pandoc을 이용해서 Markdown을 HTML을 변환하는 방법은 아래와 같�
 ```bash
 pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 --metadata title="Practice Markdown" -o README.html
 ```
+
+### LaTeX 파일을 Markdown으로 변환하기
+
+Pandoc을 사용하면 LaTeX(.tex) 문서를 Markdown(.md) 형식으로도 변환할 수 있습니다. 변환 명령어는 아래와 같습니다.
+
+```bash
+pandoc source.tex -t markdown -o output.md
+```
+
+- `source.tex`: 변환할 LaTeX 파일명
+- `-t markdown`: 변환할 출력 포맷 지정(markdown)
+- `-o output.md`: 출력 파일명
+
+복잡한 수식이나 LaTeX 전용 패키지는 markdown에서 완벽하게 표현되지 않을 수도 있으니, 변환 결과를 꼭 검토하세요.
