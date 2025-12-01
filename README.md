@@ -94,7 +94,7 @@ This is an H2
 
 - 기울여 쓰기(`italic`) : `*` 또는 `_`로 감싼 텍스트
 - 두껍게 쓰기(`bold`) : `**` 또는 `__`로 감싼 텍스트
-- 취소선(`strikethrough`) : `~~`로 감싼 텍스트 (GFM 기능)
+- 취소선(`strikethrough`) : `~~`로 감싼 텍스트
 - 이탤릭체와 두껍게를 같이 사용할 수 있음
 
 ### Syntax 마크다운 사용법
@@ -302,10 +302,10 @@ My mail <test@test.com><br>
 ## 08. Fenced Code Blocks(코드 블럭)
 
 - 간단한 인라인 코드는 텍스트를 앞뒤로 \`기호로 감싸면 됨
-- \`\`\` 혹은 ~~~ 코드. (GFM 기능)
+- \`\`\` 혹은 ~~~ 코드.
 - 첫 줄과 마지막 줄에 Back quote ( \` ) 또는 물결( ~ ) 3개 삽입
 - 코드가 여러 줄인 경우, 줄 앞에 공백 네 칸을 추가
-- \`\`\` 옆에 언어를 지정해주면 syntax color가 적용 (GFM 기능)
+- \`\`\` 옆에 언어를 지정해주면 syntax color가 적용
 
 ### Syntax 마크다운 사용법
 
@@ -341,7 +341,7 @@ function test() {
 
 ---
 
-## 09. Task List(체크 리스트) (GFM 기능)
+## 09. Task List(체크 리스트)
 
 - 줄 앞에 `- [x]`를 써서 완료된 리스트 표시
 - 줄 앞에 `- [ ]`를 써서 미완료된 리스트 표시
@@ -393,7 +393,7 @@ function test() {
 
 ---
 
-## 11. Emoji(이모지) (GFM 기능)
+## 11. Emoji(이모지)
 
 - 마크다운을 이용해 이모티콘을 표현가능
 - GitHub에서 완벽하게 지원됨
@@ -415,7 +415,7 @@ GitHub supports emoji!
 
 ---
 
-## 12. Table(테이블) (GFM 기능)
+## 12. Table(테이블)
 
 - 헤더와 셀을 구분할 때 3개 이상의 `-`(hyphen/dash) 기호가 필요
 - 헤더 셀을 구분하면서 :(Colons) 기호로 셀(열/칸) 안에 내용을 정렬할 수 있음
@@ -616,6 +616,12 @@ pandoc을 이용해서 Markdown을 HTML을 변환하는 방법은 아래와 같�
 
 ```bash
 pandoc -s README.md -c README.css --template template.html --toc --toc-depth=2 --metadata title="Practice Markdown" -o README.html
+```
+
+### Markdown을 PDF로 변환
+
+```bash
+pandoc -s README.md -o README.tex --pdf-engine=xelatex -V mainfont='MARUBURI-REGULAR.TTF' -V sansfont='MALGUNSL.TTF' -V monofont='D2CODING-VER1.3.2-20180524.TTF' -V papersize=a4
 ```
 
 ### LaTeX 파일을 Markdown으로 변환하기
